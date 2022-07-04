@@ -1,24 +1,24 @@
 #include "py/runtime.h"
 
-const mp_rom_obj_array_t myfirstaudio{
-    {&mp_type_array},
-    9,
-    {
-        1,2,4,5,6,7,8,9,10
-    },
-} mp_obj_array_t;
+STATIC mp_obj_t myaudios(mp_obj_t index_obj) 
+{
+    mp_int_t index = mp_obj_get_int(index_obj);
 
-STATIC const mp_rom_map_elem_t myaudios_module_globals_table[] = {
+    // Your code here!
 
-    { MP_ROM_QSTR(MP_QSTR___name__), MP_ROM_QSTR(MP_QSTR_audios) },
-    { MP_ROM_QSTR(MP_QSTR_myfirstaudio), MP_ROM_PTR(&myfirstaudio_obj) },
+    // signature: mp_obj_t mp_obj_new_list(size_t n, const mp_obj_t *items);
+    mp_obj_t audio[] = {
+        mp_obj_new_int(123),
+        mp_obj_new_float(456.789),
+        mp_obj_new_str("hello", 5),
+    };
+    return mp_obj_new_list(3, audio);
+}
+
+MP_DEFINE_CONST_FUN_OBJ_1(myaudios_obj, myaudios);
+
+STATIC const mp_rom_map_elem_t myaudios_globals_table[] = 
+{
+    { MP_ROM_QSTR(MP_QSTR___name__), MP_ROM_QSTR(MP_QSTR_builtins) },
+    { MP_ROM_QSTR(MP_QSTR_myaudios), MP_ROM_PTR(&myaudios_obj) },
 };
-
-STATIC MP_DEFINE_CONST_DICT(myaudios_module_globals, myaudios_module_globals_table);
-
-const mp_obj_module_t myaudios_user_cmodule = {
-    .base = { &mp_type_module },
-    .globals = (mp_obj_dict_t*)&audios_module_globals,
-};
-
-MP_REGISTER_MODULE(MP_QSTR_audios, myaudios_user_cmodule, MODULE_AUDIOS_ENABLED);

@@ -2,9 +2,10 @@
 #include "py/runtime.h"
 
 // This is the function which will be called from Python as audiolib.getAudio(a, b).
-STATIC mp_obj_t mymodule_getAudio(mp_obj_t a) 
+STATIC mp_obj_t mymodule_getAudio(mp_obj_t a, mp_obj_t b) 
 {
     int a = mp_obj_get_int(a);
+    int b = mp_obj_get_int(b);
     mp_obj_t tuple[1];
 
     tuple[0] = a;
