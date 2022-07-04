@@ -1,6 +1,7 @@
 # import time
 import random
 import array
+import myaudios
 # from machine import PWM
 # from machine import ADC
 

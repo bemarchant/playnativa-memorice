@@ -1,0 +1,1 @@
+make USER_C_MODULES=/home/benjenmarchantc/Documents/playnativa-memorice-master/mymodules/myaudios/micropython.cmake
