@@ -1,6 +1,61 @@
 #include "py/runtime.h"
 
-const mp_rom_obj_tuple_t myfirstaudio_obj = {
+//Chucao
+
+const mp_rom_obj_tuple_t sound2 = {
+    {&mp_type_tuple},
+    2,
+    {
+    MP_ROM_INT(450),
+    MP_ROM_INT(321)
+    },
+};
+    
+    
+//Chuncho
+const mp_rom_obj_tuple_t sound6 = {
+    {&mp_type_tuple},
+    2,
+    {
+    MP_ROM_INT(450),
+    MP_ROM_INT(321)
+    },
+};
+
+
+//Tiuque
+const mp_rom_obj_tuple_t sound5 = {
+    {&mp_type_tuple},
+    2,
+    {
+    MP_ROM_INT(450),
+    MP_ROM_INT(321)
+    },
+};
+
+
+//Concon
+const mp_rom_obj_tuple_t sound4 = {
+    {&mp_type_tuple},
+    2,
+    {
+    MP_ROM_INT(450),
+    MP_ROM_INT(321)
+    },
+};
+
+//Chincol
+const mp_rom_obj_tuple_t sound3 = {
+    {&mp_type_tuple},
+    2,
+    {
+    MP_ROM_INT(450),
+    MP_ROM_INT(321)
+    },
+};
+
+//Tucuquere
+const mp_rom_obj_tuple_t sound1 = {
     {&mp_type_tuple},
     54044,
     {
@@ -54049,19 +54104,4 @@ const mp_rom_obj_tuple_t myfirstaudio_obj = {
        MP_ROM_INT(120),
        MP_ROM_INT(120)
     },
-
 };
-
-STATIC const mp_rom_map_elem_t myaudios_module_globals_table[] = {
-    { MP_ROM_QSTR(MP_QSTR___name__), MP_ROM_QSTR(MP_QSTR_myaudios) },
-    { MP_ROM_QSTR(MP_QSTR_myfirstaudio), MP_ROM_PTR(&myfirstaudio_obj) },
-};
-
-STATIC MP_DEFINE_CONST_DICT(myaudios_module_globals, myaudios_module_globals_table);
-
-const mp_obj_module_t myaudios_user_cmodule = {
-    .base = { &mp_type_module },
-    .globals = (mp_obj_dict_t*)&myaudios_module_globals,
-};
-
-MP_REGISTER_MODULE(MP_QSTR_myaudios, myaudios_user_cmodule);
