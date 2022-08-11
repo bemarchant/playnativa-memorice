@@ -4,13 +4,12 @@ Created on Tue May  3 00:38:42 2022
 
 @author: bemar
 """
-import soundfile as sf
-import matplotlib.pyplot as plt
-import samplerate
 import numpy as np
-
-soundfile = '/home/benjenmarchantc/Documents/playnativa-memorice-master/externaltools/convertWAVtoPWM/tucuquereFiltrado.wav'
-text_path = '/home/benjenmarchantc/Documents/playnativa-memorice-master/externaltools/convertWAVtoPWM/audio.txt'
+import matplotlib.pyplot as plt
+import soundfile as sf
+import samplerate
+soundfile = '/home/benjencabreram/Documents/git-repos/.venv-playnativa/playnativa-memorice/externaltools/convertWAVtoPWM/tucuquereFiltrado.wav'
+text_path = '/home/benjencabreram/Documents/git-repos/.venv-playnativa/playnativa-memorice/audio'
 ###
 data_in, datasamplerate = sf.read(soundfile)
 # This means stereo so extract one channel 0
@@ -76,9 +75,5 @@ end_value = int( (firstvalue + lastvalue) / 2)
 m68code+=str(end_value)+'    \r\n};'
 #print(m68code)
 ###
-
-
-
-
 
 np.savetxt("audio", data_pwm, newline="\n")
