@@ -8,8 +8,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 import soundfile as sf
 import samplerate
-soundfile = '/home/benjencabreram/Documents/git-repos/.venv-playnativa/playnativa-memorice/externaltools/convertWAVtoPWM/tucuquereFiltrado.wav'
-text_path = '/home/benjencabreram/Documents/git-repos/.venv-playnativa/playnativa-memorice/audio'
+soundfile = '/home/benjencabreram/Documents/git-repos/.venv-playnativa/playnativa-memorice/audio-lib/wav/tiuque.wav'
+text_path = '/home/benjencabreram/Documents/git-repos/.venv-playnativa/playnativa-memorice/audio-lib/pwm/tiuque.txt'
 ###
 data_in, datasamplerate = sf.read(soundfile)
 # This means stereo so extract one channel 0
